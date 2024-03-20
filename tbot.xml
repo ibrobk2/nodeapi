@@ -1,0 +1,27 @@
+<BinaryBot>
+  <Strategy>
+    <!-- Identify the dominant trend -->
+    <Condition>
+      <TrendIndicator>EMA(20)</TrendIndicator>
+      <Comparison>Upward</Comparison>
+    </Condition>
+
+    <!-- Wait for a pullback or retracement -->
+    <Condition>
+      <PriceAction>Retracement</PriceAction>
+    </Condition>
+
+    <!-- Join the trend when a bullish chart pattern occurs -->
+    <Condition>
+      <ChartPattern>BullishFlag</ChartPattern>
+    </Condition>
+
+    <!-- Execute the trade -->
+    <Action>
+      <Trade>Buy</Trade>
+      <Amount>1</Amount>
+      <Contract>Volatility100</Contract>
+      <Expiry>5 Ticks</Expiry>
+    </Action>
+  </Strategy>
+</BinaryBot>
